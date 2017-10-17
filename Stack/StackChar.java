@@ -1,4 +1,4 @@
-public class Stack {
+public class StackChar {
  
     private int maxSize; 
     private char[] stackArray;
@@ -14,8 +14,7 @@ public class Stack {
         if(isFull()){
             System.out.println(" this stack is already full");
         }else{
-            top++; 
-            stackArray[top] = j;
+            stackArray[++top] = j;
         }
  
     }
