@@ -6,16 +6,21 @@ public class RecursiveBinarySearch {
     }
 
     public static int recursiveBinarySearch(int [] a, int p , int r, int x){
+        // lowest index greater than the highest index
+        // return false
         if (p > r){
             return -1;
         }else{
+            // find the mid point of the array
             int q = (p + r)/ 2;
+
+            // if the element is found
             if (a[q] == x){
                 return q;
-            }else if (a[q] > x){
-                return recursiveBinarySearch(a, p, q - 1, x);
-            }else{
-                return recursiveBinarySearch(a, q + 1, r , x);
+            }else if (a[q] > x){        // the element is less than the mid point
+                return recursiveBinarySearch(a, p, q - 1, x);   // shift the highest index to mid - 1
+            }else{                      // the element is greater than the mid point
+                return recursiveBinarySearch(a, q + 1, r , x);  // shift the lowest index to mid + 1
             }
         }
     }
