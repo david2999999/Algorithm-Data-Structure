@@ -3,14 +3,14 @@ package Graph;
 import java.util.ArrayList;
 
 // this will be an directional graph
-public class GraphArraylist {
+public class GraphArray {
     // number of vertices and edges
     private int vCount, eCount;
 
     // each of the elements inside adjacents will be an arrayList
     private ArrayList[] adjacents;
 
-    public GraphArraylist(int vCount){
+    public GraphArray(int vCount){
         this.vCount = vCount;
         this.eCount = 0;
         this.adjacents = new ArrayList[vCount];
